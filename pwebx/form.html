@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table align="center">
+            <tr>
+                <td>Username :</td>
+                <td><input type="text" name="username" id="username" placeholder="Masukan Username" pattern="[A-Za-z]+"></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" name="password" id="password" placeholder="Masukan Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$"></td>
+            </tr>
+            <tr>
+                <td>Umur :</td>
+                <td><input type="number" name="umur" id="umur" min="18" max="100"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin :</td>
+                <td>
+                    <input type="radio" name="jkp" id="pria" value="Laki-Laki"> Laki-Laki
+                    <input type="radio" name="jkp" id="wanita" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir :</td>
+                <td><input type="date" name="tgl_lahir" id="tgl_lahir"></td>
+            </tr>
+            <tr>
+                <td>Alamat :</td>
+                <td><textarea name="alamat" id="" rows="4" cols="30" placeholder="Masukan Alamat">    
+                </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td>
+                    <select name="txtjur" id="jur">
+                        <optgroup label="FTD">
+                            <option value="DKV">Desain Komunikasi Visual</option>
+                            <option value="TI">Teknik Informatika</option>
+                            <option value="SK">Sistem Komputer</option>
+                        </optgroup>
+                        <optgroup label="FEB">
+                            <option value="IBM">Ilmu Komunikasi</option>
+                            <option value="PBM">Ilmu Politik</option>
+                            <option value="AK">Sosiologi</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Kirim" name="cmdsubmit">
+                    <input type="reset" value="Batal" name="cmdreset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
