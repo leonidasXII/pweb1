@@ -10,7 +10,7 @@
 </head>
 <style>
     body {
-      background-color: #f7f5ee; /* Warna cream / off-white */
+      background-color: #f7f5ee; 
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
@@ -22,11 +22,24 @@
     color: #1a1a1a;
     }
 
-    .logo span {
+    .logo b {
       color: #b84a27; 
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px; 
+      border-bottom: 1px solid #333333; 
     }
 </style>
 <body>
-    <h1 class="logo">ruang<span>kata.</span></h1>
+    <div class="header-container">
+        <h1 class="logo">ruang<b>kata.</b></h1>
+        <nav>
+          <a href="#">Home</a>
+        </nav>
+    </div>
 </body>
 </html>
