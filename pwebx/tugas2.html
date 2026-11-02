@@ -9,37 +9,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&family=Ultra&family=Zeyada&display=swap" rel="stylesheet">
 </head>
 <style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #f7f5ee; 
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
+      font-family: inter, sans-serif;
+      line-height: 2;
     }
     
-    .logo {
-    font-family: 'Playfair Display', 'Georgia', 'serif';
-    font-weight: bold;
-    color: #1a1a1a;
-    }
-
-    .logo b {
-      color: #b84a27; 
-    }
-
-    .header-container {
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 15px; 
-      border-bottom: 1px solid #333333; 
+      border-bottom: 1px solid #333333;
+      padding-bottom: 15px;
     }
+
+    .logo {
+    font-family: 'Playfair Display', 'Georgia', 'serif';
+    font-weight: bold;
+    color: #b84a27;
+    }
+
+    .logo b {
+      color: #1a1a1a;
+    }
+
+  nav a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .jurnal {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #333;
+  }
 </style>
 <body>
-    <div class="header-container">
-        <h1 class="logo">ruang<b>kata.</b></h1>
-        <nav>
-          <a href="#">Home</a>
-        </nav>
+   <header class="header">
+    <h1 class="logo"><b>ruang</b>kata</h1>
+    <nav class="nav a">
+      <a href="#">Catatan</a>
+      <a href="#">Kutipan</a>
+      <a href="#">Laboratorium ↗</a>
+    </nav>
+
+    <div class="jurnal">
+      JURNAL DIGITAL / VOL. 01
     </div>
+   </header>
 </body>
 </html>
