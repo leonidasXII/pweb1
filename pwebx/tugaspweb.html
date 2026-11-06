@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruangkatayaa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        /* box-sizing: border-box; */
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #ffffff; 
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: #2b2b2b;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ------------------------------*/
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #333333;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #5EB1BF;
+        text-decoration: none;
+      }
+
+      .logo b {
+        color: #1a1a1a;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+      }
+
+      .jurnal {
+        font-family: 'Courier Prime', monospace;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #333;
+      }
+
+      /* -----------------------------------------*/
+      .hero {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 50px 0;
+        gap: 40px;
+      }
+
+      .hero-atas {
+        font-family: 'Courier Prime', monospace;
+        font-size: 11px;
+        color: #5EB1BF;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+
+      .hero-atas b {
+        color: #1a1a1a;
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 64px;
+        line-height: 1.1;
+        font-weight: 600;
+      }
+
+      .hero-title b {
+        color: #5EB1BF;
+        font-style: italic;
+        font-weight: normal;
+      }
+
+      .hero-sub {
+        border-left: 1px solid #dcd7c9;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .label-kecil {
+        font-family: 'Courier Prime', monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #8c8c8c;
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      /* --------------------------------------- */
+      .bar-kuning-wrapper {
+        background-color: #5EB1BF;
+        border-top: 1px solid #2b2b2b;
+        border-bottom: 1px solid #2b2b2b;
+        width: 100%;
+      }
+
+      .bar-kuning {
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Playfair Display', serif;
+        font-size: 16px;
+        font-style: italic;
+        color: #2b2b2b;
+        font-weight: 600;
+      }
+
+      /* --------------------------------------------*/
+      .konten-2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+        padding: 60px 0;
+      }
+
+      .artikel-utama h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .artikel-utama h2 b {
+        font-style: italic;
+        font-weight: normal;
+      }
+
+      /* ------------------------------------------*/
+      .dropcap::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-size: 48px;
+        color: #5EB1BF;
+        float: left;
+        margin-right: 12px;
+        line-height: 1;
+      }
+
+      .side-card {
+        background-color: #eeebe3;
+        padding: 30px;
+        border: 1px solid #dcd7c9;
+      }
+
+      .side-card .big-aa {
+        font-family: 'Playfair Display', serif;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+
+      .side-card .big-aa span {
+        color: #5EB1BF;
+      }
+
+      /* --------------------------------------------*/
+      .quote-section-wrapper {
+        background-color: #042A2B;
+        width: 100%;
+      }
+
+      .quote-section {
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .quote-section blockquote {
+        font-family: 'Playfair Display', serif;
+        color: #f6f4ee;
+        font-size: 36px;
+        line-height: 1.3;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .quote-section blockquote span {
+        color: #5EB1BF;
+        font-style: italic;
+      }
+
+      /*----------------------------------------------*/
+      .three-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 60px 0;
+      }
+
+      .card-item {
+        padding: 30px;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-yellow { background-color: #69140E; color: #ffffff; }
+      .card-red { background-color: #E2856E; color: #2b2b2b; }
+      .card-gray { background-color: #474B24; color: #ffffff; }
+
+      .card-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      /* ---------------------------------------------*/
+      .lab-section {
+        padding: 60px 0;
+        border-top: 1px solid #dcd7c9;
+      }
+
+      .lab-section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        line-height: 1.2;
+      }
+
+      .footer-quote {
+        text-align: center;
+        padding: 60px 0;
+        border-top: 1px solid #dcd7c9;
+      }
+
+      .footer-quote p {
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+      }
+
+      .footer-quote p span {
+        font-style: italic;
+        color: #7a7a7a;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid #dcd7c9;
+        font-size: 11px;
+        color: #7a7a7a;
+      }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <a href="#" class="logo"><b>ruang</b>sadar.</a>
+      <nav>
+        <a href="#1catatan">Catatan</a>
+        <a href="#2kata">Kutipan</a>
+        <a href="#6lab">Laboratorium ↗</a>
+      </nav>
+      <div class="jurnal">
+        JURNAL DIGITAL / VOL. 01
+      </div>
+    </header>
+  </div>
+
+  <!----------------------------------------------------------------------->
+  <div class="container">
+    <section class="hero">
+      <div>
+        <div class="hero-atas">
+          ▪ <b>TEMPAT KATA-KATA MENEMUKAN BENTUK</b>
+        </div>
+        <h1 class="hero-title">
+          Setiap kesadaran <b>✳</b><br>punya <b>ruang.</b>
+        </h1>
+      </div>
+      <div class="hero-sub">
+        <div>
+          <div class="label-kecil">SEBUAH EKSPERIMEN TIPOGRAFI</div>
+          <p>Tentang kalimat yang singgah, pikiran yang tumbuh, dan keindahan di antara keduanya.</p>
+        </div>
+        <div style="font-family: 'Courier Prime', monospace; font-size: 11px;">Mulai menjelajah ↘</div>
+      </div>
+    </section>
+  </div>
+
+  <!----------------------------------------------------->
+  <div class="bar-kuning-wrapper">
+      <div class="bar-kuning">
+        <span>kata & ruang</span> *
+        <span>bentuk & makna</span> *
+        <span>huruf & rasa</span> *
+        <span>kata & ruang</span> *
+        <span>kata & ruang</span> *
+        <span>bentuk & makna</span> *
+        <span>huruf & rasa</span> *
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------------------------->
+  <div class="container">
+    <section class="konten-2">
+      <div class="artikel-utama">
+        <a id="1catatan"><div class="label-kecil" >01 / CATATAN PILIHAN</div></a>
+        <h2><b style="color: #5EB1BF;">Menemukan</b> ruang<br>untuk sadar</h2>
+        <p class="dropcap">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui tempore delectus praesentium, eos deleniti omnis ipsa soluta, totam quasi pariatur quod ipsam dicta! Ea architecto eum iure, sed labore aperiam tempora nesciunt aliquam incidunt accusantium, vitae debitis corporis itaque voluptatem fugit odio necessitatibus, blanditiis recusandae enim nisi commodi dolorem facilis!
+        </p>
+      </div>
+
+      <div class="side-card">
+        <div class="label-kecil">CATATAN PINGGIR</div>
+        <div class="big-aa">Sadar<span>.</span></div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 16px; font-style: italic; margin-bottom: 15px;">Sadar merupan bentuk rendah diri manusia.</p>
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 15px 0;">
+        <div style="font-size: 12px; color: #555;">
+          <p><strong>Serif:</strong> Hangat, klasik, bercerita.</p>
+          <p><strong>Sans-serif:</strong> Jernih, tegas, bersahaja.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!---------------------------------------------------->   
+  <div class="quote-section-wrapper">
+    <div class="container">
+      <section class="quote-section">
+        <a id="2kata"><div class="label-kecil" style="color: #a0b0a8;padding-bottom: px;">02 / KATA YANG TINGGAL</div></a>
+        <blockquote>
+          Pelan-pelan bukan berarti tertinggal.<br>
+          Bisa jadi, kamu sedang<br>
+          <span>menikmati perjalanan.</span>
+        </blockquote>
+      </section>
+    </div>
+  </div>
+
+  <!---------------------------------------------------->   
+  <div class="container">
+    <section class="three-cards">
+      <div class="card-item card-yellow">
+        <div class="label-kecil" style="color: #ffffff;">03 / LATIHAN SPASI</div>
+        <div class="card-title" style="letter-spacing: 6px;">j e d a</div>
+        <p style="font-size: 12px;">Ruang kecil di antara kesibukan. Tarik napas. Nikmati sekarang.</p>
+      </div>
+
+      <div class="card-item card-red">
+        <div class="label-kecil" style="color: #2b2b2b;">04 / TEMA RITME</div>
+        <div class="card-title">tumbuh.</div>
+        <p style="font-size: 12px;">Tak harus terlihat setiap hari. Akar pun bekerja dalam sunyi.</p>
+      </div>
+
+      <div class="card-item card-gray">
+        <div class="label-kecil" style="color: #ffffff;">05 / SIFAT STRUKTUR</div>
+        <div class="card-title" style="font-family: 'Inter', sans-serif; letter-spacing: 2px;">BERANI</div>
+        <p style="font-size: 12px;">Mulai sebelum merasa siap. Satu langkah sudah berarti.</p>
+      </div>
+    </section>
+
+    <!---------------------------------------------->
+    <section class="lab-section">
+      <a id="6lab"><div class="label-kecil">06 / LABORATORIUM MINI</div></a>
+      <h2>Kata yang sama.<br><span style="font-style: italic; color: #5EB1BF;">Rasa yang berbeda.</span></h2>
+    </section>
+
+    <!---------------------------------------------------->  
+    <section class="footer-quote">
+      <div class="label-kecil">SEBELUM KAMU PERGI</div>
+      <p>
+        Kalimat sederhana bisa jadi istimewa.<br>
+        <span style="color: #5EB1BF;">Tergantung bagaimana kamu memberinya ruang.</span>
+      </p>
+    </section>
+
+    <!---------------------------------------------------->     
+    <footer>
+      <div class="logo" style="font-size: 18px;"><b>ruang</b><span>sadar.</span></div>
+      <div>DIBUAT UNTUK DIBACA. DIRANCANG UNTUK DIRASA.</div>
+      <div class="jurnal">LATIHAN CSS / VOL. 01</div>
+    </footer>
+  </div>
+
+</body>
+</html>
