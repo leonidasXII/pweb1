@@ -19,3 +19,19 @@
 img {
     float:right
 }
+
+.ijo {width: 300px; height: 300px; background-color: green;}
+.pink {width: 300px; height: 300px; background-color: pink;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    /* left: 130px; top:30px */
+}
+.gold {width: 300px; height: 300px; background-color: gold;}
+.container {
+    width: 80%;
+    height: 1800px;
+    border: 10pt solid black;
+    margin: 0 auto ;
+    position: relative;
+}
