@@ -210,6 +210,9 @@ body {
 
 .ex-card-box-1 {
     background-image: url(/image/dikopumdag.jpeg);
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -217,6 +220,9 @@ body {
 
 .ex-card-box-2 {
     background-image: url(/image/datautama.jpeg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -224,6 +230,9 @@ body {
 
 .ex-card-box-3 {
     background-image: url(/image/perbon.jpeg);
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -231,6 +240,9 @@ body {
 
 .ex-card-box-4 {
     background-image: url(/image/upt.jpeg);
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -238,6 +250,9 @@ body {
 
 .ex-card-box-5 {
     background-image: url(/image/kpr.jpeg);
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -245,6 +260,9 @@ body {
 
 .ex-card-box-6 {
     background-image: url(/image/bem.jpg);
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
     height: 180px;
     width: 100%;
     margin-bottom: 16px;
@@ -254,6 +272,15 @@ body {
     display: flex;
     gap: 6px;
     margin-bottom: 12px;
+}
+
+.ex-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
 }
 
 .card-tags span {
